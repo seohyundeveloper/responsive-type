@@ -369,11 +369,17 @@
     }
   }
   .visual__subtitle {
+    display: none;
     color: var(--white);
     font-size: 2.4rem;
     font-weight: 500;
     letter-spacing: -0.12rem;
     text-align: center;
+  }
+  @media screen and (width < 900px) {
+    .visual__subtitle {
+      display: block;
+    }
   }
   .visual__img {
     position: absolute;
