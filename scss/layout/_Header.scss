@@ -1,7 +1,7 @@
 @import "../components/Logo";
 @import "../components/Gnb";
 
-@layer Header {
+@layer Layout.Header {
   .header {
     @media screen and (width < 900px) {
       position: relative;

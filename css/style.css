@@ -1,4 +1,4 @@
-@layer Reset, Header, Button, Visual, Heading, Base, Align, Space;
+@layer Reset, Layout, Button, Visual, Form, Heading, Align, Space;
 :root {
   --orange: #f69740;
   --skyblue: #38c3ef;
@@ -11,7 +11,9 @@
   --grayb4: #b4b4b4;
   --graycc: #cccccc;
   --graye0: #e0e0e0;
+  --graye1: #e1e1e1;
   --graye2: #e2e2e2;
+  --grayfa: #fafafa;
   --white: #ffffff;
   --in-sine: cubic-bezier(0.47, 0, 0.745, 0.715);
   --out-sine: cubic-bezier(0.39, 0.575, 0.565, 1);
@@ -308,6 +310,32 @@
       display: block;
     }
   }
+  .btn {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.8rem;
+    box-sizing: border-box;
+  }
+  .btn.yellow {
+    border-color: var(--yellow);
+    background-color: var(--white);
+    color: var(--yellow);
+  }
+  .btn.gray {
+    border-color: var(--graye0);
+    background-color: var(--white);
+    color: var(--gray99);
+  }
+  .btn.regular {
+    min-width: 11rem;
+    height: 4.4rem;
+    padding: 0 2rem;
+    border-width: 0.2rem;
+    border-style: solid;
+    font-size: 1.6rem;
+    border-radius: 4.4rem;
+  }
 }
 @layer Heading {
   .heading.regular {
@@ -404,6 +432,93 @@
     content: url(../images/img_visual4.png);
   }
 }
+@layer Form {
+  .checkbox {
+    overflow: hidden;
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    border: none;
+    clip: rect(1px, 1px, 1px, 1px);
+  }
+  .checkbox + label {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--gray66);
+    font-size: 1.4rem;
+    font-weight: 300;
+    line-height: 1.6rem;
+    letter-spacing: -0.07rem;
+  }
+  .checkbox + label::before {
+    content: "";
+    width: 1.8rem;
+    height: 1.8rem;
+    background: url(../images/ico_check_off.svg) no-repeat 0 0/contain;
+  }
+  .checkbox:checked + label::before {
+    background-image: url(../images/ico_check_on.svg);
+  }
+  .input {
+    height: 4.4rem;
+    padding: 0 2rem;
+    border: 0.1rem solid var(--graye1);
+    background-color: var(--grayfa);
+    font-size: 1.6rem;
+    color: var(--gray99);
+  }
+  .input ::placeholder {
+    color: var(--gray99);
+  }
+  .select {
+    height: 4.4rem;
+    padding: 0 4.2rem 0 2rem;
+    border: 0.1rem solid var(--graye1);
+    background: url(../images/ico_select.svg) no-repeat right 2rem center/1.2rem auto var(--grayfa);
+    font-size: 1.6rem;
+    color: var(--gray99);
+  }
+  .add-file {
+    display: flex;
+    align-items: center;
+  }
+  .add-file input {
+    border-right: none;
+  }
+  .add-file input[type=file] {
+    overflow: hidden;
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    border: none;
+    clip: rect(1px, 1px, 1px, 1px);
+  }
+  .add-file input[type=file] + label {
+    width: 12rem;
+    border: 1px solid var(--gray99);
+    line-height: 4.4rem;
+    text-align: center;
+    background: var(--white);
+    color: var(--black);
+    font-size: 1.4rem;
+    font-weight: 400;
+    cursor: pointer;
+  }
+  .textarea {
+    width: var(--width, 100%);
+    height: var(--height, 10rem);
+    padding: 2rem;
+    border: 0.1rem solid var(--graye1);
+    background-color: var(--grayfa);
+    font-size: 1.6rem;
+    color: var(--gray99);
+    box-sizing: border-box;
+  }
+  .textarea ::placeholder {
+    color: var(--gray99);
+  }
+}
 @layer Header.Logo {
   @media screen and (width < 900px) {
     .logo {
@@ -448,7 +563,7 @@
     transform: scaleX(1);
   }
 }
-@layer Header {
+@layer Layout.Header {
   @media screen and (width < 900px) {
     .header {
       position: relative;
@@ -478,7 +593,40 @@
     }
   }
 }
-@layer Base {
+@layer Layout.Footer {
+  .footer {
+    border-top: 0.1rem solid rgba(102, 102, 102, 0.2);
+    padding: 4.5rem 0 5.7rem;
+  }
+  .footer address {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    color: var(--gray66);
+    font-size: 1.4rem;
+    font-weight: 500;
+  }
+  .footer address span {
+    width: 0.4rem;
+    height: 0.4rem;
+    border-radius: 100%;
+    background-color: var(--gray66);
+  }
+  .footer .company-info {
+    display: flex;
+    gap: 2rem;
+    padding: 1.1rem 0 0;
+    color: var(--gray66);
+    font-size: 1.4rem;
+  }
+  .footer .copy {
+    padding: 3.5rem 0 0;
+    color: var(--gray66);
+    font-size: 1.4rem;
+    font-weight: 500;
+  }
+}
+@layer Layout.Base {
   .m0auto {
     width: 122.4rem;
     margin: 0 auto;

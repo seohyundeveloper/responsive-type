@@ -1,0 +1,97 @@
+@layer Form {
+  .checkbox {
+    overflow: hidden;
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    border: none;
+    clip: rect(1px, 1px, 1px, 1px);
+    + label {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      color: var(--gray66);
+      font-size: 1.4rem;
+      font-weight: 300;
+      line-height: 1.6rem;
+      letter-spacing: -0.07rem;
+      &::before {
+        content: "";
+        width: 1.8rem;
+        height: 1.8rem;
+        background: url(../images/ico_check_off.svg) no-repeat 0 0 / contain;
+      }
+    }
+    &:checked {
+      + label {
+        &::before {
+          background-image: url(../images/ico_check_on.svg);
+        }
+      }
+    }
+  }
+
+  .input {
+    height: 4.4rem;
+    padding: 0 2rem;
+    border: 0.1rem solid var(--graye1);
+    background-color: var(--grayfa);
+    font-size: 1.6rem;
+    color: var(--gray99);
+    ::placeholder {
+      color: var(--gray99);
+    }
+  }
+
+  .select {
+    height: 4.4rem;
+    padding: 0 4.2rem 0 2rem;
+    border: 0.1rem solid var(--graye1);
+    background: url(../images/ico_select.svg) no-repeat right 2rem center / 1.2rem auto
+      var(--grayfa);
+    font-size: 1.6rem;
+    color: var(--gray99);
+  }
+
+  .add-file {
+    display: flex;
+    align-items: center;
+
+    input {
+      border-right: none;
+      &[type="file"] {
+        overflow: hidden;
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        border: none;
+        clip: rect(1px, 1px, 1px, 1px);
+        + label {
+          width: 12rem;
+          border: 1px solid var(--gray99);
+          line-height: 4.4rem;
+          text-align: center;
+          background: var(--white);
+          color: var(--black);
+          font-size: 1.4rem;
+          font-weight: 400;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+
+  .textarea {
+    width: var(--width, 100%);
+    height: var(--height, 10rem);
+    padding: 2rem;
+    border: 0.1rem solid var(--graye1);
+    background-color: var(--grayfa);
+    font-size: 1.6rem;
+    color: var(--gray99);
+    box-sizing: border-box;
+    ::placeholder {
+      color: var(--gray99);
+    }
+  }
+}

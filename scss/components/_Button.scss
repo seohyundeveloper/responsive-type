@@ -58,4 +58,31 @@
       display: block;
     }
   }
+
+  .btn {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.8rem;
+    box-sizing: border-box;
+    &.yellow {
+      border-color: var(--yellow);
+      background-color: var(--white);
+      color: var(--yellow);
+    }
+    &.gray {
+      border-color: var(--graye0);
+      background-color: var(--white);
+      color: var(--gray99);
+    }
+    &.regular {
+      min-width: 11rem;
+      height: 4.4rem;
+      padding: 0 2rem;
+      border-width: 0.2rem;
+      border-style: solid;
+      font-size: 1.6rem;
+      border-radius: 4.4rem;
+    }
+  }
 }
