@@ -1,0 +1,65 @@
+@layer Visual {
+  .visual {
+    background-color: var(--yellow);
+    .m0auto {
+      display: flex;
+      align-items: center;
+      position: relative;
+      height: 32rem;
+      @include mobile {
+        flex-direction: column;
+        justify-content: center;
+      }
+    }
+    &__title {
+      color: var(--white);
+      font-size: 7.2rem;
+      font-weight: 400;
+      letter-spacing: -0.36rem;
+      @include mobile {
+        font-size: 5rem;
+        letter-spacing: -0.25rem;
+        line-height: 1;
+      }
+    }
+    &__subtitle {
+      display: none;
+      color: var(--white);
+      font-size: 2.4rem;
+      font-weight: 500;
+      letter-spacing: -0.12rem;
+      text-align: center;
+      @include mobile {
+        display: block;
+      }
+    }
+    &__img {
+      position: absolute;
+      right: 0;
+      bottom: -4.7rem;
+      @include mobile {
+        display: none;
+      }
+      .bg1 & {
+        &::after {
+          content: url(../images/img_visual1.png);
+        }
+      }
+      .bg2 & {
+        &::after {
+          content: url(../images/img_visual2.png);
+        }
+      }
+      .bg3 & {
+        &::after {
+          content: url(../images/img_visual3.png);
+        }
+      }
+      .bg4 & {
+        &::after {
+          content: url(../images/img_visual4.png);
+        }
+      }
+    }
+  }
+}

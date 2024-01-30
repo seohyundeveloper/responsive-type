@@ -1,0 +1,29 @@
+@import "../components/Logo";
+@import "../components/Gnb";
+
+@layer Header {
+  .header {
+    @media screen and (width < 900px) {
+      position: relative;
+      background-color: var(--yellow);
+      border-bottom: 0.1rem solid rgba(255, 255, 255, 0.3);
+    }
+    > div {
+      display: grid;
+      align-items: center;
+      grid-template-columns: 20.8rem 1fr min-content;
+      height: 9rem;
+      @media screen and (width < 900px) {
+        display: block;
+      }
+    }
+    .utillity {
+      display: flex;
+      align-items: center;
+      gap: 2.6rem;
+      @media screen and (width < 900px) {
+        justify-content: space-between;
+      }
+    }
+  }
+}

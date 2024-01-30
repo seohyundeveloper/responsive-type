@@ -1,0 +1,52 @@
+@layer Align {
+  .align {
+    display: flex;
+    &.both {
+      justify-content: space-between;
+    }
+    &.right {
+      justify-content: flex-end;
+    }
+    &.center {
+      justify-content: center;
+    }
+    &.vt {
+      align-items: flex-start;
+    }
+    &.vm {
+      align-items: center;
+    }
+    &.vb {
+      align-items: flex-end;
+    }
+    &.fix-bottom {
+      position: fixed;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: var(--zindex, 10);
+      background: var(--white);
+      padding: 2rem 1.6rem 2.4rem;
+    }
+  }
+  .txt-center {
+    text-align: center;
+  }
+  .txt-right {
+    text-align: right;
+  }
+  .txt-left {
+    text-align: left;
+  }
+  table {
+    .vt {
+      vertical-align: top;
+    }
+    .vm {
+      vertical-align: middle;
+    }
+    .vb {
+      vertical-align: bottom;
+    }
+  }
+}

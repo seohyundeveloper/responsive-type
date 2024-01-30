@@ -1,0 +1,31 @@
+@layer Header.Gnb {
+  .gnb {
+    display: flex;
+    gap: 4rem;
+    @media screen and (width < 900px) {
+      display: none;
+    }
+    a {
+      position: relative;
+      color: var(--gray33);
+      font-size: 1.6rem;
+      font-weight: 700;
+      &::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: -1;
+        transform: scaleX(0);
+        border-bottom: 1rem solid var(--yellow);
+        transition: 1s var(--inout-expo);
+      }
+      &:hover {
+        &::after {
+          transform: scaleX(1);
+        }
+      }
+    }
+  }
+}
