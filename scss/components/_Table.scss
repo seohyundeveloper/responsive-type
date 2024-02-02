@@ -1,0 +1,43 @@
+@layer Component.Table {
+  .table-type1 {
+    @include mobile {
+      colgroup {
+        display: none;
+      }
+    }
+    th,
+    td {
+      padding: 3rem;
+      box-sizing: border-box;
+      @include mobile {
+        display: block;
+        padding: 3rem 0;
+        text-align: left;
+      }
+    }
+    th {
+      color: var(--gray33);
+      font-size: 1.6rem;
+      font-weight: 500;
+      @include mobile {
+        font-size: 2.6rem;
+        font-weight: 700;
+        padding-bottom: 0;
+      }
+    }
+    td {
+      color: var(--gray66);
+      font-size: 1.6rem;
+      font-weight: 400;
+      @include mobile {
+        padding-top: 1rem;
+        font-size: 2.6rem;
+      }
+    }
+    tr {
+      + tr {
+        border-top: 0.1rem solid var(--graye1);
+      }
+    }
+  }
+}

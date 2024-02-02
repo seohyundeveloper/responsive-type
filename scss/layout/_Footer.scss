@@ -2,6 +2,15 @@
   .footer {
     border-top: 0.1rem solid rgba(102, 102, 102, 0.2);
     padding: 4.5rem 0 5.7rem;
+    @include mobile {
+      padding: 3.7rem 3rem;
+      background-color: var(--gray3f);
+      .only-mobile {
+        color: #fac300;
+        font-size: 2.6rem;
+        font-weight: 700;
+      }
+    }
     address {
       display: flex;
       align-items: center;
@@ -9,11 +18,24 @@
       color: var(--gray66);
       font-size: 1.4rem;
       font-weight: 500;
+      @include mobile {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0;
+        padding: 2rem 0 0;
+        font-size: 2rem;
+        color: var(--graycc);
+      }
       span {
         width: 0.4rem;
         height: 0.4rem;
         border-radius: 100%;
         background-color: var(--gray66);
+        @include mobile {
+          display: block;
+          width: 0;
+          height: 2rem;
+        }
       }
     }
     .company-info {
@@ -22,14 +44,27 @@
       padding: 1.1rem 0 0;
       color: var(--gray66);
       font-size: 1.4rem;
+      @include mobile {
+        font-size: 2rem;
+        color: var(--graycc);
+      }
     }
     .copy {
       padding: 3.5rem 0 0;
       color: var(--gray66);
       font-size: 1.4rem;
       font-weight: 500;
+      @include mobile {
+        font-size: 1.6rem;
+        color: var(--graycc);
+      }
     }
   }
   .ad_footer {
+    @include mobile {
+      img {
+        width: 100%;
+      }
+    }
   }
 }

@@ -1,4 +1,4 @@
-@layer Reset, Layout, Button, Visual, Form, Heading, Align, Space;
+@layer Reset, Layout,Component, Button, Visual, Form, Heading, Align, Space;
 :root {
   --orange: #f69740;
   --skyblue: #38c3ef;
@@ -6,6 +6,7 @@
   --blue: #6892d0;
   --yellow: #fac300;
   --gray33: #333333;
+  --gray3f: #3f3f3f;
   --gray66: #666666;
   --gray99: #999999;
   --grayb4: #b4b4b4;
@@ -519,6 +520,52 @@
     color: var(--gray99);
   }
 }
+@layer Component.Table {
+  @media screen and (width < 900px) {
+    .table-type1 colgroup {
+      display: none;
+    }
+  }
+  .table-type1 th,
+  .table-type1 td {
+    padding: 3rem;
+    box-sizing: border-box;
+  }
+  @media screen and (width < 900px) {
+    .table-type1 th,
+    .table-type1 td {
+      display: block;
+      padding: 3rem 0;
+      text-align: left;
+    }
+  }
+  .table-type1 th {
+    color: var(--gray33);
+    font-size: 1.6rem;
+    font-weight: 500;
+  }
+  @media screen and (width < 900px) {
+    .table-type1 th {
+      font-size: 2.6rem;
+      font-weight: 700;
+      padding-bottom: 0;
+    }
+  }
+  .table-type1 td {
+    color: var(--gray66);
+    font-size: 1.6rem;
+    font-weight: 400;
+  }
+  @media screen and (width < 900px) {
+    .table-type1 td {
+      padding-top: 1rem;
+      font-size: 2.6rem;
+    }
+  }
+  .table-type1 tr + tr {
+    border-top: 0.1rem solid var(--graye1);
+  }
+}
 @layer Header.Logo {
   @media screen and (width < 900px) {
     .logo {
@@ -598,6 +645,17 @@
     border-top: 0.1rem solid rgba(102, 102, 102, 0.2);
     padding: 4.5rem 0 5.7rem;
   }
+  @media screen and (width < 900px) {
+    .footer {
+      padding: 3.7rem 3rem;
+      background-color: var(--gray3f);
+    }
+    .footer .only-mobile {
+      color: #fac300;
+      font-size: 2.6rem;
+      font-weight: 700;
+    }
+  }
   .footer address {
     display: flex;
     align-items: center;
@@ -606,11 +664,28 @@
     font-size: 1.4rem;
     font-weight: 500;
   }
+  @media screen and (width < 900px) {
+    .footer address {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 0;
+      padding: 2rem 0 0;
+      font-size: 2rem;
+      color: var(--graycc);
+    }
+  }
   .footer address span {
     width: 0.4rem;
     height: 0.4rem;
     border-radius: 100%;
     background-color: var(--gray66);
+  }
+  @media screen and (width < 900px) {
+    .footer address span {
+      display: block;
+      width: 0;
+      height: 2rem;
+    }
   }
   .footer .company-info {
     display: flex;
@@ -619,11 +694,28 @@
     color: var(--gray66);
     font-size: 1.4rem;
   }
+  @media screen and (width < 900px) {
+    .footer .company-info {
+      font-size: 2rem;
+      color: var(--graycc);
+    }
+  }
   .footer .copy {
     padding: 3.5rem 0 0;
     color: var(--gray66);
     font-size: 1.4rem;
     font-weight: 500;
+  }
+  @media screen and (width < 900px) {
+    .footer .copy {
+      font-size: 1.6rem;
+      color: var(--graycc);
+    }
+  }
+  @media screen and (width < 900px) {
+    .ad_footer img {
+      width: 100%;
+    }
   }
 }
 @layer Layout.Base {
