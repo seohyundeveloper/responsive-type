@@ -1,257 +1,257 @@
 <!DOCTYPE html>
 <html lang="ko">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta property="og:type" content="web, mobile" />
-    <meta property="og:site_name" content="미래부" />
-    <meta property="og:title" content="스타일가이드" />
-    <meta property="og:description" content="공통작업을 위한 가이드 페이지" />
-    <meta property="og:image" content="페이지 대표이미지" />
-    <meta property="og:url" content="https://github.com/rebehayan" />
-    <title>미래부 스타일가이드</title>
-    <link rel="stylesheet" href="../css/style.css" />
-    <script
-      src="https://code.jquery.com/jquery-3.7.1.slim.js"
-      integrity="sha256-UgvvN8vBkgO0luPSUl2s8TIlOSYRoGFAX4jlCIm9Adc="
-      crossorigin="anonymous"></script>
-      <script defer src="../js/table.js"></script>
-  </head>
-  <body>
-    <header class="header">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta property="og:type" content="web, mobile" />
+  <meta property="og:site_name" content="미래부" />
+  <meta property="og:title" content="스타일가이드" />
+  <meta property="og:description" content="공통작업을 위한 가이드 페이지" />
+  <meta property="og:image" content="페이지 대표이미지" />
+  <meta property="og:url" content="https://github.com/rebehayan" />
+  <title>미래부 스타일가이드</title>
+  <link rel="stylesheet" href="../css/style.css" />
+  <script
+    src="https://code.jquery.com/jquery-3.7.1.slim.js"
+    integrity="sha256-UgvvN8vBkgO0luPSUl2s8TIlOSYRoGFAX4jlCIm9Adc="
+    crossorigin="anonymous"></script>
+    <script defer src="../js/table.js"></script>
+</head>
+<body>
+  <header class="header">
+    <div class="m0auto">
+      <h1 class="logo">
+        <a href="">
+          <picture>
+            <source srcset="../images/logo_white.svg" media="(width < 900px)" />
+            <img src="../images/logo.svg" alt="Rebehayan" />
+          </picture>
+        </a>
+      </h1>
+      <nav>
+        <ul class="gnb">
+          <li>
+            <a href="">소년소녀부</a>
+            <div class="depth2">  
+              <!--메뉴 기준으로 중간으로 보낼 위치때문에 전체를 덮는 박스가 필요하다. 그 박스 기준으로 이동시켜줘야한다. -->
+              <ul>
+                <li><a href="">공지사항</a></li>
+                <li><a href="">스피치</a></li>
+                <li><a href="">매뉴얼 및 조직도</a></li>
+                <li><a href="">활동방향</a></li>
+                <li>
+                  <a href="">부원회 운영자료</a>
+                  <ul>
+                    <li><a href="">본부 등재 자료</a></li>
+                    <li><a href="">미래부 신문</a></li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="">미래본부 회의록</a>
+                  <ul>
+                    <li><a href="">회의록 작성</a></li>
+                    <li><a href="">참석결과 등록</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li>
+            <a href="">미래부</a>
+            <div class="depth2">
+              <ul>
+                <li><a href="">메뉴2-1</a></li>
+                <li><a href="">메뉴2-2</a></li>
+                <li><a href="">메뉴2-3</a></li>
+                <li><a href="">메뉴2-4</a></li>
+              </ul>
+            </div>
+          </li>
+          <li><a href="">미래본부 및 사명회</a></li>
+          <li><a href="">교육부</a></li>
+          <li><a href="">미래부 자료실</a></li>
+          <li><a href="">커뮤니티</a></li>
+        </ul>
+        <div class="bg-gnb"></div>
+        <!-- 뒤의 배경크기를 따로 관리하는 부부을 코딩해준다. -->
+      </nav>
+      <div class="utillity">
+        <a href="" class="btn-login">로그인</a>
+        <button class="btn-search" aria-label="검색"></button>
+        <button class="btn-sitemap"><span>사이트맵</span></button>
+      </div>
+    </div>
+  </header>
+  <main>
+    <div class="visual bg3">
       <div class="m0auto">
-        <h1 class="logo">
-          <a href="">
-            <picture>
-              <source srcset="../images/logo_white.svg" media="(width < 900px)" />
-              <img src="../images/logo.svg" alt="Rebehayan" />
-            </picture>
-          </a>
-        </h1>
-        <nav>
-          <ul class="gnb">
-            <li>
-              <a href="">소년소녀부</a>
-              <div class="depth2">  
-                <!--메뉴 기준으로 중간으로 보낼 위치때문에 전체를 덮는 박스가 필요하다. 그 박스 기준으로 이동시켜줘야한다. -->
-                <ul>
-                  <li><a href="">공지사항</a></li>
-                  <li><a href="">스피치</a></li>
-                  <li><a href="">매뉴얼 및 조직도</a></li>
-                  <li><a href="">활동방향</a></li>
-                  <li>
-                    <a href="">부원회 운영자료</a>
-                    <ul>
-                      <li><a href="">본부 등재 자료</a></li>
-                      <li><a href="">미래부 신문</a></li>
-                    </ul>
-                  </li>
-                  <li>
-                    <a href="">미래본부 회의록</a>
-                    <ul>
-                      <li><a href="">회의록 작성</a></li>
-                      <li><a href="">참석결과 등록</a></li>
-                    </ul>
-                  </li>
-                </ul>
-              </div>
-            </li>
-            <li>
-              <a href="">미래부</a>
-              <div class="depth2">
-                <ul>
-                  <li><a href="">메뉴2-1</a></li>
-                  <li><a href="">메뉴2-2</a></li>
-                  <li><a href="">메뉴2-3</a></li>
-                  <li><a href="">메뉴2-4</a></li>
-                </ul>
-              </div>
-            </li>
-            <li><a href="">미래본부 및 사명회</a></li>
-            <li><a href="">교육부</a></li>
-            <li><a href="">미래부 자료실</a></li>
-            <li><a href="">커뮤니티</a></li>
-          </ul>
-          <div class="bg-gnb"></div>
-          <!-- 뒤의 배경크기를 따로 관리하는 부부을 코딩해준다. -->
-        </nav>
-        <div class="utillity">
-          <a href="" class="btn-login">로그인</a>
-          <button class="btn-search" aria-label="검색"></button>
-          <button class="btn-sitemap"><span>사이트맵</span></button>
-        </div>
+        <h2 class="visual__title">미래부</h2>
+        <p class="visual__subtitle">‘지지 않는 마음’을 품은 태양 초등 소년소녀부</p>
+        <div class="visual__img"></div>
       </div>
-    </header>
-    <main>
-      <div class="visual bg3">
-        <div class="m0auto">
-          <h2 class="visual__title">미래부</h2>
-          <p class="visual__subtitle">‘지지 않는 마음’을 품은 태양 초등 소년소녀부</p>
-          <div class="visual__img"></div>
-        </div>
+    </div>
+    <!-- 
+      초점이 가도록하기 위해서는 tabindex='0' 으로 해준다. 
+      tabindex는 0,-1만 있다. -1의 경우는 초점을 아예 못가게 막아준다.
+      3단계 들어가는 메뉴를 코드짜기 어려움. 
+    -->
+    <div class="container m0auto">
+      <h3 class="heading regular">- 해돋이 부원회 -</h3>
+      <p class="heading small">
+        미래부의 성장이<br class="only-mobile" />
+        학회의 장래를 결정합니다.
+      </p>
+
+      <h3 class="heading regular txt-left">Form</h3>
+      <input type="checkbox" name="" id="chk1_1" class="checkbox" /><label for="chk1_1"
+        >선택</label
+      >
+      <input type="text" class="input" />
+      <textarea class="textarea"></textarea>
+      <div class="add-file">
+        <input type="text" class="input" readonly /><input
+          type="file"
+          name=""
+          id="file1_1"
+        /><label for="file1_1">파일찾기</label>
       </div>
-      <!-- 
-        초점이 가도록하기 위해서는 tabindex='0' 으로 해준다. 
-        tabindex는 0,-1만 있다. -1의 경우는 초점을 아예 못가게 막아준다.
-        3단계 들어가는 메뉴를 코드짜기 어려움. 
-      -->
-      <div class="container m0auto">
-        <h3 class="heading regular">- 해돋이 부원회 -</h3>
-        <p class="heading small">
-          미래부의 성장이<br class="only-mobile" />
-          학회의 장래를 결정합니다.
-        </p>
+      <select name="" id="" class="select">
+        <option value="">년도</option>
+        <option value="">2023</option>
+      </select>
 
-        <h3 class="heading regular txt-left">Form</h3>
-        <input type="checkbox" name="" id="chk1_1" class="checkbox" /><label for="chk1_1"
-          >선택</label
-        >
-        <input type="text" class="input" />
-        <textarea class="textarea"></textarea>
-        <div class="add-file">
-          <input type="text" class="input" readonly /><input
-            type="file"
-            name=""
-            id="file1_1"
-          /><label for="file1_1">파일찾기</label>
-        </div>
-        <select name="" id="" class="select">
-          <option value="">년도</option>
-          <option value="">2023</option>
-        </select>
+      <h3 class="heading regular txt-left">Button</h3>
+      <button class="btn yellow regular">button</button>
+      <button class="btn gray regular">button</button>
 
-        <h3 class="heading regular txt-left">Button</h3>
-        <button class="btn yellow regular">button</button>
-        <button class="btn gray regular">button</button>
-
-        <h3 class="heading regular txt-left">Table</h3>
-        <table class="table-type1">
-          <caption>
-            <div>제목</div>
-          </caption>
-          <colgroup>
-            <col style="width: 21rem" />
-          </colgroup>
-          <tbody>
-            <tr>
-              <th>제목</th>
-              <td>내용</td>
-            </tr>
-            <tr>
-              <th>제목</th>
-              <td>내용</td>
-            </tr>
-            <tr>
-              <th>제목</th>
-              <td>내용</td>
-            </tr>
-          </tbody>
-        </table>
-        <table class="table-type2">
+      <h3 class="heading regular txt-left">Table</h3>
+      <table class="table-type1">
+        <caption>
+          <div>제목</div>
+        </caption>
+        <colgroup>
+          <col style="width: 21rem" />
+        </colgroup>
+        <tbody>
+          <tr>
+            <th>제목</th>
+            <td>내용</td>
+          </tr>
+          <tr>
+            <th>제목</th>
+            <td>내용</td>
+          </tr>
+          <tr>
+            <th>제목</th>
+            <td>내용</td>
+          </tr>
+        </tbody>
+      </table>
+      <table class="table-type2">
+        <caption>
+          <div>표제목</div>
+        </caption>
+        <colgroup>
+          <col style="width: 25rem;" />
+          <col />
+        </colgroup>
+        <tbody>
+          <tr>
+            <th>제목</th>
+            <td>내용</td>
+          </tr>
+          <tr>
+            <th>제목</th>
+            <td>내용</td>
+          </tr>
+          <tr>
+            <th>제목</th>
+            <td>내용</td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="table-wrap">
+        <table class="table-type3">
           <caption>
             <div>표제목</div>
           </caption>
           <colgroup>
-            <col style="width: 25rem;" />
+            <col style="width: 10rem;" />
+            <col style="width: 20rem;" />
             <col />
+            <col style="width: 30rem;" />
           </colgroup>
+          <thead>
+            <th>제목1</th>
+            <th>제목2</th>
+            <th>제목3</th>
+            <th>제목4</th>
+          </thead>
           <tbody>
             <tr>
-              <th>제목</th>
-              <td>내용</td>
+              <td>내용1</td>
+              <td>내용2</td>
+              <td>내용3</td>
+              <td>내용4</td>
             </tr>
             <tr>
-              <th>제목</th>
-              <td>내용</td>
+              <td>내용1</td>
+              <td>내용2</td>
+              <td>내용3</td>
+              <td>내용4</td>
             </tr>
             <tr>
-              <th>제목</th>
-              <td>내용</td>
+              <td>내용1</td>
+              <td>내용2</td>
+              <td>내용3</td>
+              <td>내용4</td>
+            </tr>
+            <tr>
+              <td>내용1</td>
+              <td>내용2</td>
+              <td>내용3</td>
+              <td>내용4</td>
+            </tr>
+            <tr>
+              <td>내용1</td>
+              <td>내용2</td>
+              <td>내용3</td>
+              <td>내용4</td>
             </tr>
           </tbody>
-        </table>
-        <div class="table-wrap">
-          <table class="table-type3">
-            <caption>
-              <div>표제목</div>
-            </caption>
-            <colgroup>
-              <col style="width: 10rem;" />
-              <col style="width: 20rem;" />
-              <col />
-              <col style="width: 30rem;" />
-            </colgroup>
-            <thead>
-              <th>제목1</th>
-              <th>제목2</th>
-              <th>제목3</th>
-              <th>제목4</th>
-            </thead>
-            <tbody>
-              <tr>
-                <td>내용1</td>
-                <td>내용2</td>
-                <td>내용3</td>
-                <td>내용4</td>
-              </tr>
-              <tr>
-                <td>내용1</td>
-                <td>내용2</td>
-                <td>내용3</td>
-                <td>내용4</td>
-              </tr>
-              <tr>
-                <td>내용1</td>
-                <td>내용2</td>
-                <td>내용3</td>
-                <td>내용4</td>
-              </tr>
-              <tr>
-                <td>내용1</td>
-                <td>내용2</td>
-                <td>내용3</td>
-                <td>내용4</td>
-              </tr>
-              <tr>
-                <td>내용1</td>
-                <td>내용2</td>
-                <td>내용3</td>
-                <td>내용4</td>
-              </tr>
-            </tbody>
-          </table>  
-        </div>
-        <h3 class="heading regular txt-left">기타</h3>
-        <nav class="pagination">
-          <button>이전</button>
-          <ol data-current="10" data-total="50">
-            <li><a href="">1</a></li>
-            <li><a href="">2</a></li>
-            <li><a href="">3</a></li>
-            <li><a href="">4</a></li>
-            <li><a href="">5</a></li>
-          </ol>
-          <button>다음</button>
-        </nav>
+        </table>  
       </div>
-    </main>
-    <div class="ad_footer m0auto">
-      <a href=""><img src="../images/ad_footer.png" alt="" /></a>
+      <h3 class="heading regular txt-left">기타</h3>
+      <nav class="pagination">
+        <button>이전</button>
+        <ol data-current="10" data-total="50">
+          <li><a href="">1</a></li>
+          <li><a href="">2</a></li>
+          <li><a href="">3</a></li>
+          <li><a href="">4</a></li>
+          <li><a href="">5</a></li>
+        </ol>
+        <button>다음</button>
+      </nav>
     </div>
-    <footer class="footer">
-      <div class="m0auto">
-        <div class="only-mobile">리베하얀</div>
-        <address>
-          (06586) 서울특별시 구로구 공원로 66 리베하얀
-          <span></span>
-          (06586) 66, Gongwon-ro, Guro-gu, Seoul, Korea
-        </address>
-        <div class="company-info">
-          <div>TEL : 1566-1234</div>
-          <div>FAX : 02-5555-7300</div>
-        </div>
-        <div class="copy">Copyright &copy; Rebehayan. All rights reserved.</div>
+  </main>
+  <div class="ad_footer m0auto">
+    <a href=""><img src="../images/ad_footer.png" alt="" /></a>
+  </div>
+  <footer class="footer">
+    <div class="m0auto">
+      <div class="only-mobile">리베하얀</div>
+      <address>
+        (06586) 서울특별시 구로구 공원로 66 리베하얀
+        <span></span>
+        (06586) 66, Gongwon-ro, Guro-gu, Seoul, Korea
+      </address>
+      <div class="company-info">
+        <div>TEL : 1566-1234</div>
+        <div>FAX : 02-5555-7300</div>
       </div>
-    </footer>
-  </body>
+      <div class="copy">Copyright &copy; Rebehayan. All rights reserved.</div>
+    </div>
+  </footer>
+</body>
 </html>
