@@ -11,8 +11,12 @@
     <meta property="og:url" content="https://github.com/rebehayan" />
     <title>미래부 스타일가이드</title>
     <link rel="stylesheet" href="../css/style.css" />
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.slim.js"
+      integrity="sha256-UgvvN8vBkgO0luPSUl2s8TIlOSYRoGFAX4jlCIm9Adc="
+      crossorigin="anonymous"></script>
+      <script defer src="../js/table.js"></script>
   </head>
-
   <body>
     <header class="header">
       <div class="m0auto">
@@ -26,13 +30,50 @@
         </h1>
         <nav>
           <ul class="gnb">
-            <li><a href="">소년소녀부</a></li>
-            <li><a href="">미래부</a></li>
+            <li>
+              <a href="">소년소녀부</a>
+              <div class="depth2">  
+                <!--메뉴 기준으로 중간으로 보낼 위치때문에 전체를 덮는 박스가 필요하다. 그 박스 기준으로 이동시켜줘야한다. -->
+                <ul>
+                  <li><a href="">공지사항</a></li>
+                  <li><a href="">스피치</a></li>
+                  <li><a href="">매뉴얼 및 조직도</a></li>
+                  <li><a href="">활동방향</a></li>
+                  <li>
+                    <a href="">부원회 운영자료</a>
+                    <ul>
+                      <li><a href="">본부 등재 자료</a></li>
+                      <li><a href="">미래부 신문</a></li>
+                    </ul>
+                  </li>
+                  <li>
+                    <a href="">미래본부 회의록</a>
+                    <ul>
+                      <li><a href="">회의록 작성</a></li>
+                      <li><a href="">참석결과 등록</a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li>
+              <a href="">미래부</a>
+              <div class="depth2">
+                <ul>
+                  <li><a href="">메뉴2-1</a></li>
+                  <li><a href="">메뉴2-2</a></li>
+                  <li><a href="">메뉴2-3</a></li>
+                  <li><a href="">메뉴2-4</a></li>
+                </ul>
+              </div>
+            </li>
             <li><a href="">미래본부 및 사명회</a></li>
             <li><a href="">교육부</a></li>
             <li><a href="">미래부 자료실</a></li>
             <li><a href="">커뮤니티</a></li>
           </ul>
+          <div class="bg-gnb"></div>
+          <!-- 뒤의 배경크기를 따로 관리하는 부부을 코딩해준다. -->
         </nav>
         <div class="utillity">
           <a href="" class="btn-login">로그인</a>
@@ -49,6 +90,11 @@
           <div class="visual__img"></div>
         </div>
       </div>
+      <!-- 
+        초점이 가도록하기 위해서는 tabindex='0' 으로 해준다. 
+        tabindex는 0,-1만 있다. -1의 경우는 초점을 아예 못가게 막아준다.
+        3단계 들어가는 메뉴를 코드짜기 어려움. 
+      -->
       <div class="container m0auto">
         <h3 class="heading regular">- 해돋이 부원회 -</h3>
         <p class="heading small">
@@ -101,6 +147,92 @@
             </tr>
           </tbody>
         </table>
+        <table class="table-type2">
+          <caption>
+            <div>표제목</div>
+          </caption>
+          <colgroup>
+            <col style="width: 25rem;" />
+            <col />
+          </colgroup>
+          <tbody>
+            <tr>
+              <th>제목</th>
+              <td>내용</td>
+            </tr>
+            <tr>
+              <th>제목</th>
+              <td>내용</td>
+            </tr>
+            <tr>
+              <th>제목</th>
+              <td>내용</td>
+            </tr>
+          </tbody>
+        </table>
+        <div class="table-wrap">
+          <table class="table-type3">
+            <caption>
+              <div>표제목</div>
+            </caption>
+            <colgroup>
+              <col style="width: 10rem;" />
+              <col style="width: 20rem;" />
+              <col />
+              <col style="width: 30rem;" />
+            </colgroup>
+            <thead>
+              <th>제목1</th>
+              <th>제목2</th>
+              <th>제목3</th>
+              <th>제목4</th>
+            </thead>
+            <tbody>
+              <tr>
+                <td>내용1</td>
+                <td>내용2</td>
+                <td>내용3</td>
+                <td>내용4</td>
+              </tr>
+              <tr>
+                <td>내용1</td>
+                <td>내용2</td>
+                <td>내용3</td>
+                <td>내용4</td>
+              </tr>
+              <tr>
+                <td>내용1</td>
+                <td>내용2</td>
+                <td>내용3</td>
+                <td>내용4</td>
+              </tr>
+              <tr>
+                <td>내용1</td>
+                <td>내용2</td>
+                <td>내용3</td>
+                <td>내용4</td>
+              </tr>
+              <tr>
+                <td>내용1</td>
+                <td>내용2</td>
+                <td>내용3</td>
+                <td>내용4</td>
+              </tr>
+            </tbody>
+          </table>  
+        </div>
+        <h3 class="heading regular txt-left">기타</h3>
+        <nav class="pagination">
+          <button>이전</button>
+          <ol data-current="10" data-total="50">
+            <li><a href="">1</a></li>
+            <li><a href="">2</a></li>
+            <li><a href="">3</a></li>
+            <li><a href="">4</a></li>
+            <li><a href="">5</a></li>
+          </ol>
+          <button>다음</button>
+        </nav>
       </div>
     </main>
     <div class="ad_footer m0auto">

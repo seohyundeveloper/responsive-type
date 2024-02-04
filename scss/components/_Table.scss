@@ -40,4 +40,131 @@
       }
     }
   }
+  .table-type2 {
+    @include mobile {
+      colgroup {
+        display: none;
+      }
+    }
+    // 반응형시에는 colgroup을 display:none을 해준다.
+    // th,td의 경우 기본적으로 display: table-cell이다.
+    // 반응형에서 밑으로 내려야함.
+    // 노션 반응형에서 표 영상을 시청해서 해결
+    th,
+    td {
+      padding: 1.9rem 3rem;
+      font-size: 1.6rem;
+      border: 0.1rem solid var(--graye1);
+      @include mobile {
+        display: block;
+       // margin-top: -0.1rem;
+      }
+    }
+    th {
+      color: var(--gray33);
+      background-color: var(--grayf6);
+    }
+    td {
+      color: var(--gray66);
+      @include mobile {
+        border-top: none;
+        border-bottom: none;
+      }
+    }
+    tr:last-child {
+      td {
+        border-bottom: 0.1rem solid var(--graye1);
+      }
+    }
+  }
+  .table-type3 {
+    // 테이블이 너무 복잡하고 쪼개기 어려운경우 가로스크롤 생기게
+    // @include mobile {
+    //   colgroup {
+    //     display: none;
+    //   }
+    // }
+    th {
+      padding: 2rem;
+      background-color: var(--gray66);
+      font-size: 1.4rem;
+      color: var(--white);
+      + th {
+        border-left:0.1rem solid var(--graye1);
+      }
+    }
+    td {
+      padding: 2rem;
+      font-size: 1.6rem;
+      color: var(--gray66);
+      text-align: center;
+      border-bottom:0.1rem solid var(--graye1);
+      + td {
+        border-left:0.1rem solid var(--graye1);
+      }
+    }
+  }
+
+  .table-wrap{
+    // 스크롤 디자인 - 노션에 있음.
+    position: relative;
+    @include mobile {
+      overflow-x: hidden;
+      &.--active {
+        overflow-x: auto;
+        &::after,
+        &::before {
+          display: none;
+        }
+      }
+      &::before {
+        content: '클릭후 \a 드래그하세요';
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        border-radius: 100%;
+        transform: translate(-50%, -50%);
+        width: 12rem;
+        height: 12rem;
+        background-color: var(--white);
+        z-index: 2;
+        font-size: 1.6rem;
+        white-space: pre;
+        text-align: center;
+      }
+      &::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        background: rgba(0,0,0, 0.3);
+        backdrop-filter: blur(1px);
+      }
+      > table {
+        width: 240rem;
+      }
+    }
+  }
+
+  .table-type4 {
+    @include mobile {
+      colgroup {
+        display: none;
+      }
+    }
+    th,
+    td {
+      border: 0.1rem solid var(--gray66);
+      padding: 2rem;
+      font-size: 1.6rem;
+      @include mobile {
+        display: block;
+      }
+    }
+  }
 }

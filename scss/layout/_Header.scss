@@ -3,6 +3,7 @@
 
 @layer Layout.Header {
   .header {
+    border-bottom: 0.1rem solid var(--yellow);
     @media screen and (width < 900px) {
       position: relative;
       background-color: var(--yellow);

@@ -32,6 +32,7 @@
   }
 
   .input {
+    width: var(--width, auto);  //가로길이 변수로 지정.
     height: 4.4rem;
     padding: 0 2rem;
     border: 0.1rem solid var(--graye1);
@@ -40,6 +41,10 @@
     color: var(--gray99);
     ::placeholder {
       color: var(--gray99);
+    }
+    .table-type4 & {
+      width: 100%;
+      box-sizing: border-box;
     }
   }
 
@@ -92,6 +97,18 @@
     box-sizing: border-box;
     ::placeholder {
       color: var(--gray99);
+    }
+  }
+
+  .date-place {  // 날짜선택도 그룹화시켜 처리해준다.
+    display: grid;
+    grid-template-columns: 14rem 10rem 27rem;
+    gap: 1rem;
+    @include mobile {
+      grid-template-columns: 1fr 1fr;
+      input {
+        grid-column: 1 / -1;  // 1에서 끝까지 병합시키기
+      }
     }
   }
 }

@@ -1,10 +1,12 @@
-@layer Reset, Layout,Component, Button, Visual, Form, Heading, Align, Space;
+@charset "UTF-8";
+@layer Reset, Layout,Component, Button, Visual, Form, Heading, Pages, Align, Space;
 :root {
   --orange: #f69740;
   --skyblue: #38c3ef;
   --green: #88d948;
   --blue: #6892d0;
   --yellow: #fac300;
+  --yellow2: #fff387;
   --gray33: #333333;
   --gray3f: #3f3f3f;
   --gray66: #666666;
@@ -15,6 +17,7 @@
   --graye1: #e1e1e1;
   --graye2: #e2e2e2;
   --grayfa: #fafafa;
+  --grayf6: #f6f6f6;
   --white: #ffffff;
   --in-sine: cubic-bezier(0.47, 0, 0.745, 0.715);
   --out-sine: cubic-bezier(0.39, 0.575, 0.565, 1);
@@ -300,6 +303,9 @@
       background: url(../images/ico_sitemap_white.svg) no-repeat center/2.8rem auto;
     }
   }
+  .btn-sitemap.--active::before {
+    background-image: url(../images/ico_close.svg);
+  }
   .btn-search {
     display: none;
     width: 9rem;
@@ -309,6 +315,9 @@
   @media screen and (width < 900px) {
     .btn-search {
       display: block;
+    }
+    .btn-search.--active {
+      opacity: 0;
     }
   }
   .btn {
@@ -462,6 +471,7 @@
     background-image: url(../images/ico_check_on.svg);
   }
   .input {
+    width: var(--width, auto);
     height: 4.4rem;
     padding: 0 2rem;
     border: 0.1rem solid var(--graye1);
@@ -471,6 +481,10 @@
   }
   .input ::placeholder {
     color: var(--gray99);
+  }
+  .table-type4 .input {
+    width: 100%;
+    box-sizing: border-box;
   }
   .select {
     height: 4.4rem;
@@ -519,6 +533,19 @@
   .textarea ::placeholder {
     color: var(--gray99);
   }
+  .date-place {
+    display: grid;
+    grid-template-columns: 14rem 10rem 27rem;
+    gap: 1rem;
+  }
+  @media screen and (width < 900px) {
+    .date-place {
+      grid-template-columns: 1fr 1fr;
+    }
+    .date-place input {
+      grid-column: 1/-1;
+    }
+  }
 }
 @layer Component.Table {
   @media screen and (width < 900px) {
@@ -565,6 +592,147 @@
   .table-type1 tr + tr {
     border-top: 0.1rem solid var(--graye1);
   }
+  @media screen and (width < 900px) {
+    .table-type2 colgroup {
+      display: none;
+    }
+  }
+  .table-type2 th,
+  .table-type2 td {
+    padding: 1.9rem 3rem;
+    font-size: 1.6rem;
+    border: 0.1rem solid var(--graye1);
+  }
+  @media screen and (width < 900px) {
+    .table-type2 th,
+    .table-type2 td {
+      display: block;
+    }
+  }
+  .table-type2 th {
+    color: var(--gray33);
+    background-color: var(--grayf6);
+  }
+  .table-type2 td {
+    color: var(--gray66);
+  }
+  @media screen and (width < 900px) {
+    .table-type2 td {
+      border-top: none;
+      border-bottom: none;
+    }
+  }
+  .table-type2 tr:last-child td {
+    border-bottom: 0.1rem solid var(--graye1);
+  }
+  .table-type3 th {
+    padding: 2rem;
+    background-color: var(--gray66);
+    font-size: 1.4rem;
+    color: var(--white);
+  }
+  .table-type3 th + th {
+    border-left: 0.1rem solid var(--graye1);
+  }
+  .table-type3 td {
+    padding: 2rem;
+    font-size: 1.6rem;
+    color: var(--gray66);
+    text-align: center;
+    border-bottom: 0.1rem solid var(--graye1);
+  }
+  .table-type3 td + td {
+    border-left: 0.1rem solid var(--graye1);
+  }
+  .table-wrap {
+    position: relative;
+  }
+  @media screen and (width < 900px) {
+    .table-wrap {
+      overflow-x: hidden;
+    }
+    .table-wrap.--active {
+      overflow-x: auto;
+    }
+    .table-wrap.--active::after, .table-wrap.--active::before {
+      display: none;
+    }
+    .table-wrap::before {
+      content: "클릭후 \a드래그하세요";
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      border-radius: 100%;
+      transform: translate(-50%, -50%);
+      width: 12rem;
+      height: 12rem;
+      background-color: var(--white);
+      z-index: 2;
+      font-size: 1.6rem;
+      white-space: pre;
+      text-align: center;
+    }
+    .table-wrap::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      background: rgba(0, 0, 0, 0.3);
+      backdrop-filter: blur(1px);
+    }
+    .table-wrap > table {
+      width: 240rem;
+    }
+  }
+  @media screen and (width < 900px) {
+    .table-type4 colgroup {
+      display: none;
+    }
+  }
+  .table-type4 th,
+  .table-type4 td {
+    border: 0.1rem solid var(--gray66);
+    padding: 2rem;
+    font-size: 1.6rem;
+  }
+  @media screen and (width < 900px) {
+    .table-type4 th,
+    .table-type4 td {
+      display: block;
+    }
+  }
+}
+@layer Component.Pagination {
+  .pagination {
+    display: flex;
+    gap: 1rem;
+    font-size: 2.4rem;
+  }
+  .pagination ol {
+    display: flex;
+    gap: 1rem;
+  }
+  @media screen and (width < 900px) {
+    .pagination ol::before {
+      content: attr(data-current) " / ";
+    }
+    .pagination ol::after {
+      content: attr(data-total);
+    }
+  }
+  @media screen and (width < 900px) {
+    .pagination ol li {
+      display: none;
+    }
+  }
+  .pagination button {
+    font-size: 2.4rem;
+  }
 }
 @layer Header.Logo {
   @media screen and (width < 900px) {
@@ -582,35 +750,200 @@
 @layer Header.Gnb {
   .gnb {
     display: flex;
-    gap: 4rem;
   }
   @media screen and (width < 900px) {
     .gnb {
-      display: none;
+      display: block;
+      position: fixed;
+      left: 0;
+      right: 0;
+      top: 9.2rem;
+      height: calc(100vh - 9.2rem);
+      z-index: 1000;
+      background-color: var(--yellow);
+      padding: 0 10%;
+      transform: translateX(-100%);
+      transition: transform 0.5s;
+    }
+    .gnb.--active {
+      transform: translateX(0);
     }
   }
-  .gnb a {
+  .gnb > li {
+    padding: 0 2rem;
+  }
+  @media screen and (width < 900px) {
+    .gnb > li {
+      border-bottom: 0.1rem solid rgba(255, 255, 255, 0.5);
+    }
+  }
+  .gnb > li:hover > a::after {
+    transform: scaleX(1);
+  }
+  .gnb > li:hover .depth2 {
+    z-index: 100;
+    animation: fadeIn 0.8s 0.2s 1 both var(--inout-quint);
+  }
+  @media screen and (width < 900px) {
+    .gnb > li:hover .depth2 {
+      animation: none;
+      border-top: 0.1rem solid var(--yellow2);
+      padding: 3.4rem 0;
+      height: 74.9rem;
+    }
+  }
+  @media screen and (width < 900px) {
+    .gnb > li:hover:nth-child(2):hover .depth2 {
+      height: 30.8rem;
+    }
+  }
+  .gnb > li a {
+    display: block;
+    line-height: 9rem;
     position: relative;
     color: var(--gray33);
     font-size: 1.6rem;
     font-weight: 700;
   }
-  .gnb a::after {
+  @media screen and (width < 900px) {
+    .gnb > li a {
+      padding: 3.4rem 0;
+      color: var(--white);
+      font-size: 4.6rem;
+      line-height: 1;
+    }
+  }
+  .gnb > li a::after {
     content: "";
     position: absolute;
     left: 0;
     right: 0;
-    bottom: 0;
+    bottom: 3.2rem;
     z-index: -1;
     transform: scaleX(0);
     border-bottom: 1rem solid var(--yellow);
     transition: 1s var(--inout-expo);
   }
-  .gnb a:hover::after {
-    transform: scaleX(1);
+  @media screen and (width < 900px) {
+    .gnb > li a::after {
+      display: none;
+    }
+  }
+  .gnb .depth2 {
+    opacity: 0;
+    position: absolute;
+    top: 9rem;
+    left: 50%;
+    z-index: -1;
+    transform: translateX(-50%);
+    padding: 3rem 0 0 20.8rem;
+    width: 122.4rem;
+    box-sizing: border-box;
+    opacity: 0;
+  }
+  @media screen and (width < 900px) {
+    .gnb .depth2 {
+      position: static;
+      transform: translate(0, 0);
+      padding: 0;
+      width: 100%;
+      opacity: 1;
+      padding: 0;
+      height: 0;
+      overflow: hidden;
+      transition: height 1s var(--inout-quint), padding 1s var(--inout-quint);
+    }
+  }
+  .gnb .depth2 > ul {
+    display: flex;
+    gap: 6rem;
+  }
+  @media screen and (width < 900px) {
+    .gnb .depth2 > ul {
+      display: block;
+    }
+  }
+  .gnb .depth2 > ul > li:first-child > a {
+    padding-top: 0;
+  }
+  .gnb .depth2 > ul > li:last-child > a:last-child {
+    padding-bottom: 0;
+  }
+  .gnb .depth2 > ul > li:hover > a {
+    color: var(--gray33);
+  }
+  @media screen and (width < 900px) {
+    .gnb .depth2 > ul > li:hover > a {
+      color: var(--white);
+    }
+  }
+  .gnb .depth2 > ul > li > a {
+    font-size: 1.4rem;
+    font-weight: bold;
+    line-height: 2.027rem;
+    color: var(--gray66);
+  }
+  @media screen and (width < 900px) {
+    .gnb .depth2 > ul > li > a {
+      display: block;
+      font-size: 3.4rem;
+      line-height: 1;
+      color: var(--white);
+      padding: 1.7rem 0;
+    }
+  }
+  .gnb .depth2 > ul > li > ul {
+    padding: 1.6rem 0 0;
+  }
+  .gnb .depth2 > ul > li > ul > li > a {
+    font-size: 1.4rem;
+    line-height: 3rem;
+    color: var(--gray66);
+  }
+  @media screen and (width < 900px) {
+    .gnb .depth2 > ul > li > ul > li > a {
+      display: block;
+      color: var(--yellow2);
+      font-size: 3rem;
+      line-height: 1;
+      padding: 1.7rem 0;
+    }
+  }
+}
+.bg-gnb {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 9.1rem;
+  height: 0;
+  background-color: var(--white);
+  z-index: 99;
+  transition: height var(--inout-quint) 0.5s;
+}
+@media screen and (width < 900px) {
+  .bg-gnb {
+    display: none;
+  }
+}
+
+.gnb:has(> li:hover .depth2) + .bg-gnb {
+  height: 15.7rem;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, -3rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(-50%, 0);
   }
 }
 @layer Layout.Header {
+  .header {
+    border-bottom: 0.1rem solid var(--yellow);
+  }
   @media screen and (width < 900px) {
     .header {
       position: relative;
@@ -737,6 +1070,18 @@
       display: block;
     }
   }
+  .container {
+    padding: 10rem 0 20rem;
+  }
+  @media screen and (width < 900px) {
+    .container {
+      padding: 10rem 3rem 20rem;
+      box-sizing: border-box;
+    }
+  }
+  body.--hidden {
+    overflow: hidden;
+  }
 }
 @layer Align {
   .align {
@@ -788,4 +1133,19 @@
     vertical-align: bottom;
   }
 }
-@layer Space {}/*# sourceMappingURL=style.css.map */
+@layer Space {
+  .mt30 {
+    margin-top: 3rem;
+  }
+  .mt60 {
+    margin-top: 6rem;
+  }
+}
+@layer Pages.sub2 {
+  @media screen and (width < 900px) {
+    .img-history {
+      width: calc(100% + 6rem);
+      margin-left: -3rem;
+    }
+  }
+}/*# sourceMappingURL=style.css.map */

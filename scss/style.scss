@@ -1,4 +1,4 @@
-@layer Reset, Layout,Component, Button, Visual, Form, Heading, Align, Space;
+@layer Reset, Layout,Component, Button, Visual, Form, Heading, Pages, Align, Space;
 
 @import "./abstracts/mixin"; //믹스인
 @import "./base/Variable"; // 변수
@@ -8,8 +8,11 @@
 @import "./components/Visual"; // 비주얼
 @import "./components/Form"; // 서식
 @import "./components/Table"; // 표
+@import './components/_Pagination'; // Paging
 @import "./layout/Header"; // 헤더
 @import "./layout/Footer"; // 푸터
 @import "./layout/Base"; // 기본정의
 @import "./layout/Align"; // 정렬
 @import "./layout/Space"; // 여백
+@import "./pages/sub2"; // 소년소녀부
+

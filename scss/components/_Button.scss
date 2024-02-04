@@ -48,6 +48,11 @@
         background: url(../images/ico_sitemap_white.svg) no-repeat center / 2.8rem auto;
       }
     }
+    &.--active {
+      &::before{
+        background-image: url(../images/ico_close.svg);
+      }
+    }
   }
   .btn-search {
     display: none;
@@ -55,6 +60,10 @@
     height: 9rem;
     background: url(../images/ico_search.svg) no-repeat center / 3.0414rem auto;
     @media screen and (width < 900px) {
+      &.--active {
+        opacity: 0;  // 둘중하나 사용
+        // visibility: visible;
+      }
       display: block;
     }
   }
