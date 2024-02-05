@@ -734,6 +734,44 @@
     font-size: 2.4rem;
   }
 }
+@layer Breadcrumb {
+  .bread-crumb {
+    --gap: 2rem;
+    --width: 2.4rem;
+    --height: 2.4rem;
+    --bg: url("../../images/ico_arrow-right.svg");
+    display: inline-flex;
+    align-items: center;
+    gap: var(--gap);
+    padding: 2.8rem 0;
+    box-sizing: border-box;
+  }
+  .bread-crumb > li {
+    display: flex;
+    align-items: center;
+    gap: var(--gap);
+    font-weight: bold;
+    font-size: 1.6rem;
+    line-height: 2.317rem;
+  }
+  .bread-crumb > li + li {
+    font-weight: 400;
+  }
+  .bread-crumb > li + li::before {
+    content: "";
+    width: var(--width);
+    height: var(--height);
+    background: var(--bg) no-repeat 0 0/contain;
+  }
+  .bread-crumb > li:last-child {
+    text-decoration: underline;
+    font-weight: bold;
+  }
+  .line-type1 {
+    border: none;
+    border: 0.1rem solid var(--yellow);
+  }
+}
 @layer Header.Logo {
   @media screen and (width < 900px) {
     .logo {
