@@ -494,6 +494,35 @@
     font-size: 1.6rem;
     color: var(--gray99);
   }
+  .mobile .select {
+    height: 10rem;
+    padding: 0 3.9rem 0 3rem;
+    border: none;
+    border-bottom: 0.1rem solid var(--graye1);
+    background: url(../images/ico_select.svg) no-repeat right 3.9rem center/1.956rem auto var(--white);
+    font-size: 2.4rem;
+    line-height: 3.475rem;
+    color: var(--black);
+  }
+  .mobile .select + select {
+    border-left: 0.1rem solid var(--graye1);
+  }
+  .select:hover {
+    font-weight: bold;
+    text-decoration: underline;
+    font-size: 2.6rem;
+    line-height: 3.765rem;
+    color: var(--black);
+  }
+  .bread-align {
+    display: none;
+  }
+  @media screen and (width < 900px) {
+    .bread-align {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
+  }
   .add-file {
     display: flex;
     align-items: center;
@@ -770,6 +799,14 @@
   .line-type1 {
     border: none;
     border: 0.1rem solid var(--yellow);
+  }
+  @media screen and (width < 900px) {
+    .bread-crumb {
+      display: none;
+    }
+    .line-type1 {
+      border: none;
+    }
   }
 }
 @layer Header.Logo {
