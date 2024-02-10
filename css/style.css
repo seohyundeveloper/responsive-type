@@ -1,5 +1,5 @@
 @charset "UTF-8";
-@layer Reset, Layout,Component, Button, Visual, Form, Heading, Pages, Align, Space;
+@layer Reset, Layout, Component, Breadcrumb, Button, Visual, Form, Heading, Pages, Align, Space;
 :root {
   --orange: #f69740;
   --skyblue: #38c3ef;
@@ -763,7 +763,7 @@
     font-size: 2.4rem;
   }
 }
-@layer Component.Breadcrumb {
+@layer Breadcrumb {
   .bread-crumb {
     --gap: 2rem;
     --width: 2.4rem;
