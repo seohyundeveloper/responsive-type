@@ -1146,7 +1146,7 @@
     }
   }
   .container {
-    padding: 10rem 0 20rem;
+    padding: 10rem 0 11.5rem;
   }
   @media screen and (width < 900px) {
     .container {
