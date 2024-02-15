@@ -735,6 +735,84 @@
       display: block;
     }
   }
+  @media screen and (width < 900px) {
+    .table-type5 colgroup {
+      display: none;
+    }
+  }
+  .table-type5 thead {
+    background-color: var(--gray66);
+  }
+  @media screen and (width < 900px) {
+    .table-type5 thead {
+      display: none;
+    }
+  }
+  .table-type5 thead th {
+    color: var(--white);
+    font-size: 1.4rem;
+    height: 6rem;
+  }
+  .table-type5 thead th + th {
+    border-left: 0.1rem solid var(--graye1);
+  }
+  .table-type5 tbody td {
+    padding: 4.3rem 0;
+    color: var(--gray66);
+    font-size: 1.6rem;
+    text-align: center;
+    border-bottom: 0.1rem solid var(--graye1);
+  }
+  @media screen and (width < 900px) {
+    .table-type5 tbody td {
+      display: grid;
+      grid-template-columns: 12rem 1fr;
+      grid-template-rows: minmax(8.1rem, auto);
+      align-items: center;
+      gap: 0 2rem;
+      text-align: left;
+      padding: 0;
+      border-bottom: 0.1rem solid var(--graye1);
+      font-size: 2.4rem;
+      background: linear-gradient(to right, var(--gray66), var(--gray66) 12rem, var(--white) 12rem);
+    }
+    .table-type5 tbody td::before {
+      align-self: center;
+      background-color: var(--gray66);
+      color: var(--white);
+      font-size: 2.2rem;
+      text-align: center;
+    }
+    .table-type5 tbody td:nth-child(1)::before {
+      content: "월";
+    }
+    .table-type5 tbody td:nth-child(2)::before {
+      content: "형태";
+    }
+    .table-type5 tbody td:nth-child(3)::before {
+      content: "운영방안";
+    }
+    .table-type5 tbody td:nth-child(4)::before {
+      content: "비고";
+    }
+  }
+  .table-type5 tbody td + td {
+    border-left: 0.1rem solid var(--graye1);
+  }
+  @media screen and (width < 900px) {
+    .table-type5 tbody td + td {
+      border-left: none;
+    }
+  }
+  @media screen and (width < 900px) {
+    .table-type5 tbody tr {
+      display: block;
+      border-top: 0.1rem solid var(--graye1);
+    }
+    .table-type5 tbody tr + tr {
+      margin-top: 2rem;
+    }
+  }
 }
 @layer Component.Pagination {
   .pagination {
